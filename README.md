@@ -1,6 +1,6 @@
 ## Team Name: TBD
 
-## Project Name: TBD
+## Project Name: dummysignupdummyidiotsignup
 
 ## Project Description:
 Make a version of signupgenius.com without adds
@@ -9,10 +9,10 @@ Make a version of signupgenius.com without adds
 
 Last Name       | First Name      | GitHub Username    | Scrum Role
 --------------- | --------------- | ------------------ | ---------------
-Davis           | Colten          | TalkTomeG00se      | Developer
-Prussen         | Nicholas        | nicholasprussen    | Scrum Master
-Johsnon         | Chloe           | ChloeJohnsonCodes  | Developer
 Brown           | Wesley          | WesleyBrown792     | Product Owner
+Davis           | Colten          | TalkTomeG00se      | Developer
+Johsnon         | Chloe           | ChloeJohnsonCodes  | Developer
+Prussen         | Nicholas        | nicholasprussen    | Scrum Master
 
 ## :eyes: :memo: Scrum Linter Reports:
 Access the [Scrum Linter Report](http://cs.boisestate.edu/~bdit/ScrumLinter/CS471S21ScrumLinterReports/CS471-S21-Team8_sDrQiMnHH3oG5qbtJZySwOZtY8rknJgaEFVLAKxi/). A new report will be automatically generated every few hours.
