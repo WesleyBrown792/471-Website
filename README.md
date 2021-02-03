@@ -9,7 +9,7 @@ Make a version of signupgenius.com without adds
 
 Last Name       | First Name      | GitHub Username    | Scrum Role
 --------------- | --------------- | ------------------ | ---------------
-TBD             | TBD             | TBD                | TBDDeveloper
+Davis           | Colten          | TBD                | TBDDeveloper
 TBD             | TBD             | TBD                | TBDScrum Master
 Johsnon         | Chloe           | ChloeJohnsonCodes  | Developer
 Brown           | Wesley          | WesleyBrown792     | Product Owner
