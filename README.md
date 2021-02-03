@@ -3,7 +3,7 @@
 ## Project Name: TBD
 
 ## Project Description:
-TBD (e.g., build a TBD app for TBD)
+Make a version of signupgenius.com without adds
 
 ## Team Members:
 
@@ -12,7 +12,7 @@ Last Name       | First Name      | GitHub Username    | Scrum Role
 TBD             | TBD             | TBD                | TBDDeveloper
 TBD             | TBD             | TBD                | TBDScrum Master
 Johsnon         | Chloe           | ChloeJohnsonCodes  | Developer
-TBD             | TBD             | TBD                | TBD
+Brown           | Wesley          | WesleyBrown792     | Product Owner
 
 ## :eyes: :memo: Scrum Linter Reports:
 Access the [Scrum Linter Report](http://cs.boisestate.edu/~bdit/ScrumLinter/CS471S21ScrumLinterReports/CS471-S21-Team8_sDrQiMnHH3oG5qbtJZySwOZtY8rknJgaEFVLAKxi/). A new report will be automatically generated every few hours.
