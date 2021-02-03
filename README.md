@@ -11,7 +11,7 @@ Last Name       | First Name      | GitHub Username    | Scrum Role
 --------------- | --------------- | ------------------ | ---------------
 TBD             | TBD             | TBD                | TBDDeveloper
 TBD             | TBD             | TBD                | TBDScrum Master
-TBD             | TBD             | TBD                | TBDProduct Owner
+Johsnon         | Chloe           | ChloeJohnsonCodes  | Developer
 TBD             | TBD             | TBD                | TBD
 
 ## :eyes: :memo: Scrum Linter Reports:
