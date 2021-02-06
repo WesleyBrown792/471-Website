@@ -11,7 +11,7 @@ Last Name       | First Name      | GitHub Username    | Scrum Role
 --------------- | --------------- | ------------------ | ---------------
 Brown           | Wesley          | WesleyBrown792     | Product Owner
 Davis           | Colten          | TalkTomeG00se      | Developer
-Johsnon         | Chloe           | ChloeJohnsonCodes  | Developer
+Johnson         | Chloe           | ChloeJohnsonCodes  | Developer
 Prussen         | Nicholas        | nicholasprussen    | Scrum Master
 
 ## :eyes: :memo: Scrum Linter Reports:
