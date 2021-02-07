@@ -1,6 +1,6 @@
-## Team Name: TBD
+## Team Name: Rebel Scrum
 
-## Project Name: dummysignupdummyidiotsignup
+## Project Name: SignUp-Dummy
 
 ## Project Description:
 Make a version of signupgenius.com without adds
