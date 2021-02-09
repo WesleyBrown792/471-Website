@@ -1,1 +1,9 @@
-//this is the login page
+<?php
+    require_once "components/nav.php";
+?>
+
+       
+
+    </body>
+
+</html>
