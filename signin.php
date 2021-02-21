@@ -19,7 +19,7 @@ $_SESSION["access"] = -1;
         <input type="submit" value="Submit">
     </form>
     <h1>Create Account</h1>
-    <form method="POST" action= "accCreate.php" onSubmit="return AccountValidation()">
+    <form method="GET" action= "accCreate.php" onSubmit="return AccountValidation()">
         <div><label for="user">Email: </label><input type="text" name="email" id="accEmail" value="<?php if(isset($_SESSION['email'])){echo htmlentities($_SESSION['email']);}?>"/></div>
         <div><label for="password">Password: </label><input type="password" name="password" id="accPassword"/></div>
         <input type="submit" value="Submit">
