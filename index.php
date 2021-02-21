@@ -2,7 +2,6 @@
     //this is the homepage 
     require_once "components/nav.php";
 ?>
-        <link rel="stylesheet" href="css/home.css">
 
     <h1>Welcome To SignUp Dummy</h1>
 
