@@ -1,5 +1,6 @@
 #navBody {
-  background-color: #EBE8E4;
+  background: rgb(34,193,195);
+  background: linear-gradient(0deg, rgba(34,193,195,1) 26%, rgba(44,138,171,1) 75%);
   color: #222;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
