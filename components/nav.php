@@ -3,6 +3,7 @@
 <head>
 <link rel="stylesheet" href="css/nav.css">
 <link rel="icon" href="img/favicon.png">  
+<link rel="stylesheet" href="css/home.css">
 </head>
 
 <body id="navBody">
