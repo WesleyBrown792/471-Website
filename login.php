@@ -1,14 +1,23 @@
 <?php
-//this is what runs the logging in functionality
-    session_start();
-    include 'Dao.php';
-    $dao = new Dao();
-    $username = $_GET['email'];
-    $password = $_GET['password'];
-    /* if ($dao->userExists($username, $password)) {
-        echo "Logged In";
+session_start();
+require_once 'Dao.php';
+$email=$_POST["email"];
+$pass=$_POST["password"];
+$dao = new Dao();
+$salt = "totalyrandomjunkyouknow";
+$newpass = hash('sha256',$pass.$salt);
+
+if ($dao->userExists($email, $newpass)) {
+    if($email == "admin@admin.com"){
+        $_SESSION['access'] = 1;
+        $_SESSION['authenticated'] = true;
+        header("Location: index.php");
+    }else{
+        $_SESSION['authenticated'] = true;
+        header("Location: index.php");
     }
-    else {
-         header("Location: PATH/signin.php");
-    } */
-?>
+} else {
+    $_SESSION['authenticated'] = false;
+    $_SESSION['email'] = $email;
+    header("Location: index.php");
+}

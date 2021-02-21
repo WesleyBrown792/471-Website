@@ -16,25 +16,24 @@
             }
         }
 
-        /* public function addUser($user, $pass, $acc){
+         public function addUser($email, $pass){
             $conn = $this->getConnection();
-            $saveQ = "insert into user (username,password,access) values (:user,:pass,:acc);";
+            $saveQ = "insert into user (email,password) values (:email,:pass);";
             $q = $conn->prepare($saveQ);
-            $q->bindParam(":user",$user);
+            $q->bindParam(":email",$email);
             $q->bindParam(":pass",$pass);
-            $q->bindParam(":acc",$acc);
             $q->execute();
-        } */
+        }
         
-        /* public function userExists($user, $pass){
+        public function userExists($email, $pass){
             $conn = $this->getConnection();
-            $stmt =  $conn->prepare("select * from user where username = :user and password = :pass;");
-            $stmt->bindParam(":user",$user,PDO::PARAM_STR);
+            $stmt =  $conn->prepare("select * from user where email = :email and password = :pass;");
+            $stmt->bindParam(":email",$email,PDO::PARAM_STR);
             $stmt->bindParam(":pass",$pass,PDO::PARAM_STR);
             $stmt->execute();
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-            if(is_null($user)||$user==""){
+            if(is_null($email)){
                 return false;
             }else{
                 if(count($result)==1){
@@ -44,6 +43,6 @@
                 }
             }
         
-        } */
+        }
     }
 ?>
