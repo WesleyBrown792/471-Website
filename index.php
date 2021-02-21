@@ -17,6 +17,18 @@
     <div id="homeButton">
         <button type="button">Create A Event</button>
     </div>
+
+    <div class="row">
+        <div class="column">
+            <img src="img/300.png" style="width:100%">
+        </div>
+        <div class="column">
+            <img src="img/300.png" style="width:100%">
+        </div>
+        <div class="column">
+            <img src="img/300.png" style="width:100%">
+        </div>
+    </div>
        
 
     </body>
