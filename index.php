@@ -20,13 +20,13 @@
 
     <div class="row">
         <div class="column">
-            <img src="img/300.png" style="width:100%">
+            <img src="img/300.png">
         </div>
         <div class="column">
-            <img src="img/300.png" style="width:100%">
+            <img src="img/300.png">
         </div>
         <div class="column">
-            <img src="img/300.png" style="width:100%">
+            <img src="img/300.png">
         </div>
     </div>
        
