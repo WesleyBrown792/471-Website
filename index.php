@@ -13,6 +13,10 @@
         Bacon ipsum dolor amet cupim frankfurter non, short ribs lorem eu spare ribs salami tail magna porchetta turkey. Occaecat est shank filet mignon pork duis drumstick spare ribs meatloaf meatball. Pork belly porchetta bresaola tempor tri-tip kielbasa chuck short loin consequat cupim ball tip pork chop strip steak. Sausage shankle brisket deserunt landjaeger proident porchetta ham hock ipsum cupidatat esse.
         </p>
     </div>
+
+    <div id="homeButton">
+        <button type="button">Create A Event</button>
+    </div>
     <body>
        
 
