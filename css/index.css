@@ -1,0 +1,57 @@
+.first-homepage-section {
+    padding: 0;
+    height: calc(100% - 58px);
+    background-image: url("../img/NarrowsBridgeBlurred.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.first-homepage-section-container {
+    color: white;
+    height: 100%;
+}
+
+.first-section-heading {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.home-page-heading {
+    font-size: 5rem;
+    text-shadow: 4px 4px #000000;
+    text-align: center;
+    font-weight: bold;
+}
+
+.first-section-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-section-list ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.first-section-list li {
+    padding: 15px;
+    display: inline;
+    font-weight: bold;
+}
+
+.first-section-create-button {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bold-font {
+    font-weight: bold;
+}

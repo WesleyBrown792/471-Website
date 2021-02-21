@@ -1,33 +1,51 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/index.css">
+    <?php
+    include "components/head.php";
+    ?>
+</head>
+
 <?php
-    //this is the homepage 
-    require_once "components/nav.php";
+//this is the homepage 
+//require_once "components/nav.php";
 ?>
 
-    <h1>Welcome To SignUp Dummy</h1>
+<body class="h-100">
+    <div class="h-100">
+        <?php
+        include "components/nav.php";
+        ?>
+        <div id="full-width-body-container" class="container-fluid p-0">
+            <div class="w-100 first-homepage-section">
+                <div class="container-xl first-homepage-section-container">
+                    <div class="first-section-heading w-100">
+                        <h1 class="home-page-heading">Group Organizing for Dummies</h1>
+                    </div>
+                    <div class="first-section-list w-100">
+                        <ul>
+                            <li>Schools</li>
+                            <li>Family</li>
+                            <li>Business</li>
+                            <li>Volunteers</li>
+                            <li>Sports</li>
+                            <li>Church</li>
+                            <li>Temple</li>
+                        </ul>
+                    </div>
+                    <div class="first-section-create-button w-100">
+                        <a href="signin.php">
+                            <button type="button" class="btn  btn-warning btn-lg">Create a Sign-Up</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100 second-homepage-section">
 
-    <div id="content">
-        <p id="about">
-        Bacon ipsum dolor amet cupim frankfurter non, short ribs lorem eu spare ribs salami tail magna porchetta turkey. Occaecat est shank filet mignon pork duis drumstick spare ribs meatloaf meatball. Pork belly porchetta bresaola tempor tri-tip kielbasa chuck short loin consequat cupim ball tip pork chop strip steak. Sausage shankle brisket deserunt landjaeger proident porchetta ham hock ipsum cupidatat esse.
-        </p>
-    </div>
-
-    <div id="homeButton">
-        <button type="button">Create A Event</button>
-    </div>
-
-    <div class="row">
-        <div class="column">
-            <img src="img/300.png">
+            </div>
         </div>
-        <div class="column">
-            <img src="img/300.png">
-        </div>
-        <div class="column">
-            <img src="img/300.png">
-        </div>
     </div>
-       
-
-    </body>
+</body>
 
 </html>

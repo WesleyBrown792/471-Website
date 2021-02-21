@@ -1,20 +1,29 @@
 <html>
 
-<head>
-<link rel="stylesheet" href="css/nav.css">
-<link rel="icon" href="img/favicon.png">  
-<link rel="stylesheet" href="css/home.css">
-</head>
-
-<body id="navBody">
-    <div id="navDiv">
-        <nav id="navID">
-            <ul id="navList">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="event.php">Setup Event</a></li>
-                <li><a href="help">FAQ</a></li>
-                <li><a href="signin.php">Signin/Creat Account</a></li>
-            </ul>
-            
-        </nav>
+<body>
+    <div class="container-fluid bg-dark">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="index.php"><img src="img/favicon.png"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link" href="index.php">Home</a>
+                        <a class="nav-item nav-link" href="event.php">Setup Event</a>
+                        <a class="nav-item nav-link" href="help">FAQ</a>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link" href="signin.php">Sign-in / Create Account</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
     </div>
+
+</body>
+
+</html>
