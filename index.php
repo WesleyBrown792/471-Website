@@ -17,7 +17,6 @@
     <div id="homeButton">
         <button type="button">Create A Event</button>
     </div>
-    <body>
        
 
     </body>
