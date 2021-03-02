@@ -1,70 +1,80 @@
+"use strict";
+function ValidityChecker() {
+    var valid = [false, false, false, false, false, false, false];
+    var validStr = ["the email must not be left blank",
+                "a valid email must be provided (JohnDoe@gmail.com, etc.)",
+                "8-16 characters",
+                "at least one digit",
+                "at least one lowercase letter",
+                "at least one uppercase letter",
+                "at least one special character"];
+
+    function EmailCorrectForm() {
+        var val = document.getElementById("accEmail").value;
+        if (val !== "") {
+            valid[0] = true;
+        }
+        var atPos = val.indexOf("@");
+        var periodPos = val.indexOf(".");
+        if (!(atPos < 1 || (periodPos - atPos) < 2)) {
+           valid[1] = true;
+        }
+    }
+
+    function PasswordCorrectForm() {
+        var valStr = document.getElementById("accPassword").value;
+        if ((valStr.length > 7) && (valStr.length < 17)) {
+            valid[2] = true;
+        }
+        if (new RegExp(".*[0-9].*").test(valStr)) {
+            valid[3] = true;
+        }
+        if (new RegExp(".*[a-z].*").test(valStr)) {
+            valid[4] = true;
+        }
+        if (new RegExp(".*[A-Z].*").test(valStr)) {
+            valid[5] = true;
+        }
+        if (new RegExp(".*[!@#$%^&*(),.?:{}|<>].*").test(valStr)) {
+            valid[6] = true;
+        }
+    }
+
+    function AccountValidation() {
+        EmailCorrectForm();
+        PasswordCorrectForm();
+        var retVal = "";
+        var issues = 0;
+        var i = 0;
+        for (i = 0; i < valid.length; i += 1) {
+            if (valid[i] === false) {
+                if (i > 1 && issues === 0) {
+                    retVal += ("The password must contain " + validStr[i] + "; ");
+                }
+                else if (i > 1) {
+                    retVal += ("the password must contain " + validStr[i] + "; ");
+                }
+                else if (issues === 0 && i < 2) {
+                    retVal += (validStr[i].charAt(0).toUpperCase() + validStr[i].slice(1) + "; ");
+                }
+                else {
+                    retVal += (validStr[i] + "; ");
+                }
+                issues += 1;
+            }
+        }
+        window.alert(`${issues} issues: ` + retVal);
+        return issues === 0;
+    }
+    return AccountValidation();
+}
+
 function Empty() {
-	emailVal = document.getElementById("loginEmail").value;
-	passVal = document.getElementById("loginPassword").value;
-	if ((emailVal=="") || (passVal=="")) {
-		alert("We know you're a dummy, but you should be able to provide us with your email and password");
-		return false;
-	}
-	return true;
-}
-function EmailCorrectForm() {
-	var val = document.getElementById("accEmail").value;
-	console.log(val)
-	if (val=="") {
-		alert("We know you're a dummy, but you should be able to provide us with your email");
-		return false;
-	}
-	with (val) {
-		atPos = val.indexOf("@");
-		periodPos = val.indexOf(".");
-		if (atPos < 1 || (periodPos - atPos) < 2) {
-			alert("Please provide a valid email (JohnDoe@gmail.com, etc.)");
-			return false;
-		}
-		else {
-			return true;
-		}
-	}
-}
-
-function PasswordCorrectForm() {
-	var valStr = document.getElementById("accPassword").value;
-	console.log(valStr)
-	if (valStr=="") {
-		alert("We know you're a dummy, but you should be able to provide us with your password");
-		return false;
-	}
-	else if ((valStr.length< 8) || (valStr.length > 16)) {
-		alert("The password must be 8-16 characters long.");
-		return false;
-	}
-	else if (!(new RegExp(".*[0-9].*").test(valStr))) {
-		alert("The password must contain at least one digit.");
-		return false;
-	}
-	else if (!(new RegExp(".*[a-z].*").test(valStr))) {
-		alert("The password must contain at least one lowercase letter.");
-		return false;
-	}
-	else if (!(new RegExp(".*[A-Z].*").test(valStr))) {
-		alert("The password must contain at least one uppercase letter.");
-		return false;
-	}
-	else if (!(new RegExp(".*[!@#$%^&*(),.?:{}|<>].*").test(valStr))) {
-		alert("The password must contain at least one special character.");
-		return false;
-	}
-	else {
-		return true;
-	}
-}
-
-function AccountValidation() {
-	if (!EmailCorrectForm()) {
-		return false;
-	}
-	else if (!PasswordCorrectForm()) {
-		return false;
-	}
-	return true;
+    var emailVal = document.getElementById("loginEmail").value;
+    var passVal = document.getElementById("loginPassword").value;
+    if ((emailVal === "") || (passVal === "")) {
+        window.alert(`We know you're a dummy, but you should be able to provide us with your email and password`);
+        return false;
+    }
+    return true;
 }

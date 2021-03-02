@@ -45,7 +45,7 @@ $_SESSION["access"] = -1;
                     </div>
                     <div class="col-md-6 login-form-2">
                         <h3>Create Account</h3>
-                        <form method="POST" action="accCreate.php" onSubmit="return AccountValidation()">
+                        <form method="POST" action="accCreate.php" onSubmit="return ValidityChecker()">
                             <div class="form-group">
                                 <input type="text" name="email" id="accEmail" class="form-control" placeholder="Your Email *" value="<?php if(isset($_SESSION['email'])){echo htmlentities($_SESSION['email']);}?>" />
                             </div>
