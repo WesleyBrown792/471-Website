@@ -1,6 +1,7 @@
 <html>
 <?php
 session_start();
+print $_SESSION['authenticated']; // testing
 ?>
 
 <body>
