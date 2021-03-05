@@ -1,7 +1,6 @@
 <html>
 <?php
 session_start();
-print $_SESSION['authenticated']; // testing
 ?>
 
 <body>
@@ -22,7 +21,7 @@ print $_SESSION['authenticated']; // testing
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                     <?php
-                    if($_SESSION['authenticated'] = true){ // checks if user logged in...not working
+                    if(isset($_SESSION['authenticated'])){ // checks if user logged in...not working
 
                         echo "<a class='nav-item nav-link' href='logout.php'>Logout</a>"; // logged in, show logout
                     } else {
