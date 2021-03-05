@@ -17,7 +17,15 @@
                 </div>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-item nav-link" href="signin.php">Sign-in / Create Account</a>
+                    <?php
+                    if(isset($_SESSION["authenticated"])){ // checks if user logged in
+
+                        echo "<a class='nav-item nav-link' action='logout.php'>Logout</a>"; // logged in, show logout
+                    } else {
+
+                        echo "<a class='nav-item nav-link' href='signin.php'>Sign-in / Create Account</a>"; // not logged in
+                    }
+                    ?>
                     </div>
                 </div>
             </nav>
