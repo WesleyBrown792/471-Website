@@ -21,7 +21,7 @@ session_start();
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                     <?php
-                    if(isset($_SESSION['authenticated'])){ // checks if user logged in...not working
+                    if(isset($_SESSION['authenticated']) && $_SESSION['authenticated'] = true){ // checks if user logged in...not working
 
                         echo "<a class='nav-item nav-link' href='logout.php'>Logout</a>"; // logged in, show logout
                     } else {
