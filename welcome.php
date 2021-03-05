@@ -6,9 +6,7 @@ session_start();
 
     <head>
 
-    <?php
-        include "components/head.php";
-    ?>
+  
     </head>
 
     <body>
