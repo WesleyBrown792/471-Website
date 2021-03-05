@@ -11,10 +11,10 @@ if ($dao->userExists($email, $newpass)) {
     if($email == "admin@admin.com"){
         $_SESSION['access'] = 1;
         $_SESSION['authenticated'] = true;
-        header("Location: index.php");
+        header("Location: welcome.php");
     }else{
         $_SESSION['authenticated'] = true;
-        header("Location: index.php");
+        header("Location: welcome.php");
     }
 } else {
     $_SESSION['authenticated'] = false;
