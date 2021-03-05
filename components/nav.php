@@ -20,7 +20,7 @@
                     <?php
                     if(isset($_SESSION["authenticated"])){ // checks if user logged in
 
-                        echo "<a class='nav-item nav-link' action='logout.php'>Logout</a>"; // logged in, show logout
+                        echo "<a class='nav-item nav-link' href='logout.php'>Logout</a>"; // logged in, show logout
                     } else {
 
                         echo "<a class='nav-item nav-link' href='signin.php'>Sign-in / Create Account</a>"; // not logged in
