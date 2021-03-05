@@ -7,7 +7,7 @@ session_start();
     <head>
 
     <?php
-        include "components/nav.php";
+        include "components/head.php";
     ?>
     </head>
 
