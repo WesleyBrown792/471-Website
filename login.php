@@ -19,5 +19,6 @@ if ($dao->userExists($email, $newpass)) {
 } else {
     $_SESSION['authenticated'] = false;
     $_SESSION['email'] = $email;
-    header("Location: index.php");
+    // header("Location: index.php");
+    header("Location: welcome.php");
 }
