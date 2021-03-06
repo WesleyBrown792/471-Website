@@ -27,11 +27,9 @@
         
         public function userExists($email, $pass){
             $conn = $this->getConnection();
-            //$stmt =  $conn->prepare("select * from user where email = :email and password = :pass;");
-            //$stmt->bindParam(":email",$email,PDO::PARAM_STR);
-            //$stmt->bindParam(":pass",$pass,PDO::PARAM_STR);
-            $stmt =  $conn->prepare("select * from user where email = ? and password = ?;");
-            $stmt->bindParam("ss",$email, $pass);
+            $stmt =  $conn->prepare("select * from user where email = :email and password = :pass;");
+            $stmt->bindParam(":email",$email,PDO::PARAM_STR);
+            $stmt->bindParam(":pass",$pass,PDO::PARAM_STR);
             $stmt->execute();
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
