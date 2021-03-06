@@ -23,7 +23,7 @@ session_start();
                     <?php
                     if($_SESSION["authenticated"] === TRUE){ 
 
-                        echo "<a class='nav-item nav-link' href='logout.php'>Thinks Session is Set</a>"; // logged in, show logout
+                        echo "<a class='nav-item nav-link' href='logout.php'>Logout</a>"; // logged in, show logout
                     } else {
 
                         echo "<a class='nav-item nav-link' href='signin.php'>Sign-in / Create Account</a>"; // not logged in
