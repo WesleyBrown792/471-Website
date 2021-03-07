@@ -2,7 +2,6 @@
 session_start();
 $_SESSION['authenticated'] = false;
 $_SESSION["access"] = -1;
-$_SESSION['isLoggedIn'] = "no"; // cdavis addition, testing purposes
 ?>
 
 <html>

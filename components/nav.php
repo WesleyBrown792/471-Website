@@ -1,7 +1,6 @@
 <html>
 <?php
 session_start();
-$logged = $_SESSION['isLoggedin'];
 ?>
 
 <body>
@@ -23,11 +22,10 @@ $logged = $_SESSION['isLoggedin'];
                     <div class="navbar-nav">
                     <?php
 
-                    $temp = $_SESSION["authenticated"];
 
-                    if(isset($logged)){ // not working
+                    if(isset($_SESSION['isLoggedIn'])){ // not working
 
-                        if($logged = "yes"){ // logged in
+                        if($_SESSION['IsloggedIn'] = "yes"){ // logged in
 
                             echo "<a class='nav-item nav-link' href='logout.php'>Session Authen. Is Set</a>";
 
