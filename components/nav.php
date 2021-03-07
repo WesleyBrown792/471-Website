@@ -35,6 +35,9 @@ $logged = $_SESSION['authenticated'];
 
                             echo "<a class='nav-item nav-link' href='signin.php'>Sign-in / Create Account</a>";
                         }
+                    } else { // session variable not set
+
+                        echo "<a class='nav-item nav-link' href='signin.php'>Sign-in / Create Account</a>";
                     }
                     ?>
                     </div>

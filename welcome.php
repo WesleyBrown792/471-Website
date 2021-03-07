@@ -19,6 +19,7 @@ session_start();
             <?php
                 include "components/nav.php";
             ?>
+            <h1>Welcome To Your Dashboard<h1>
         </div>
     
     </body>
