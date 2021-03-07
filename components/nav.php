@@ -21,10 +21,15 @@ session_start();
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                     <?php
-                    if(isset($_SESSION['authenticated']) && $_SESSION['authenticated'] == false){ // not working
+
+                    $temp = $_SESSION["authenticated"];
+
+                    if(isset($_SESSION['authenticated'])){ // not working
+
                         echo "<a class='nav-item nav-link' href='signin.php'>Sign-in / Create Account</a>"; // not logged in
                         
                     } else {
+
                         echo "<a class='nav-item nav-link' href='logout.php'>Session Authen. Is Set</a>"; // logged in, show logout
                     }
                     ?>
