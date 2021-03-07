@@ -1,6 +1,7 @@
 <html>
 <?php
 session_start();
+$logged = $_SESSION['authenticated'];
 ?>
 
 <body>
@@ -24,13 +25,16 @@ session_start();
 
                     $temp = $_SESSION["authenticated"];
 
-                    if(isset($_SESSION['authenticated'])){ // not working
+                    if(isset($logged)){ // not working
 
-                        echo "<a class='nav-item nav-link' href='signin.php'>Sign-in / Create Account</a>"; // not logged in
-                        
-                    } else {
+                        if($logged == true){ // logged in
 
-                        echo "<a class='nav-item nav-link' href='logout.php'>Session Authen. Is Set</a>"; // logged in, show logout
+                            echo "<a class='nav-item nav-link' href='logout.php'>Session Authen. Is Set</a>";
+
+                        } else { // not logged in
+
+                            echo "<a class='nav-item nav-link' href='signin.php'>Sign-in / Create Account</a>";
+                        }
                     }
                     ?>
                     </div>
