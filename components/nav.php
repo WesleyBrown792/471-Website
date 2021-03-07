@@ -1,7 +1,7 @@
 <html>
 <?php
 session_start();
-$loggedIn = $_SESSION['isLoggedin'];
+$logged = $_SESSION['isLoggedin'];
 ?>
 
 <body>
@@ -25,7 +25,7 @@ $loggedIn = $_SESSION['isLoggedin'];
 
                     $temp = $_SESSION["authenticated"];
 
-                    if(isset($loggedIn)){ // not working
+                    if(isset($logged)){ // not working
 
                         if($logged = "yes"){ // logged in
 
@@ -33,11 +33,11 @@ $loggedIn = $_SESSION['isLoggedin'];
 
                         } else { // not logged in
 
-                            echo "<a class='nav-item nav-link' href='signin.php'>Sign-in / Create Account</a>";
+                            echo "<a class='nav-item nav-link' href='signin.php'>Sign-in / Create Account-Set</a>";
                         }
                     } else { // session variable not set
 
-                        echo "<a class='nav-item nav-link' href='signin.php'>Sign-in / Create Account</a>";
+                        echo "<a class='nav-item nav-link' href='signin.php'>Sign-in / Create Account-Not Set</a>";
                     }
                     ?>
                     </div>
