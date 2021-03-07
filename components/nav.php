@@ -22,8 +22,8 @@ session_start();
                     <div class="navbar-nav">
                     <?php
                     if(isset($_SESSION['authenticated'])){ // not working
-                        $temp = $_SESSION['authenticated'];
-                        echo "<a class='nav-item nav-link' href='logout.php'>$temp</a>"; // logged in, show logout
+                    
+                        echo "<a class='nav-item nav-link' href='logout.php'>Session Authen. Is Set</a>"; // logged in, show logout
                     } else {
                         echo "<a class='nav-item nav-link' href='signin.php'>Sign-in / Create Account</a>"; // not logged in
                     }
