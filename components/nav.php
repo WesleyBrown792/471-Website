@@ -27,7 +27,7 @@ session_start();
 
                         if($_SESSION['IsloggedIn'] = "yes"){ // logged in
 
-                            echo "<a class='nav-item nav-link' href='logout.php'>Session Authen. Is Set</a>";
+                            echo "<a class='nav-item nav-link' href='logout.php'>Logout</a>";
 
                         } else { // not logged in
 
@@ -35,7 +35,7 @@ session_start();
                         }
                     } else { // session variable not set
 
-                        echo "<a class='nav-item nav-link' href='signin.php'>Sign-in / Create Account-Not Set</a>";
+                        echo "<a class='nav-item nav-link' href='signin.php'>Sign-in / Create Account</a>";
                     }
                     ?>
                     </div>
