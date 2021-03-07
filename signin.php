@@ -64,6 +64,9 @@ $_SESSION["access"] = -1;
                 </div>
             </div>
         </div>
+        <?php
+            include "components/footer.php";
+        ?>
     </div>
 </body>
 

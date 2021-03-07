@@ -2,7 +2,6 @@
 <?php
 session_start();
 ?>
-
 <body>
     <div class="container-fluid bg-dark">
         <div class="container">
@@ -22,21 +21,16 @@ session_start();
                     <div class="navbar-nav">
                     <?php
 
+                        if(isset($_SESSION['isLoggedIn'])){ 
+                            if($_SESSION['IsloggedIn'] = "yes"){ // logged in
+                                 echo "<a class='nav-item nav-link' href='logout.php'>Logout</a>";
 
-                    if(isset($_SESSION['isLoggedIn'])){ // not working
-
-                        if($_SESSION['IsloggedIn'] = "yes"){ // logged in
-
-                            echo "<a class='nav-item nav-link' href='logout.php'>Logout</a>";
-
-                        } else { // not logged in
-
-                            echo "<a class='nav-item nav-link' href='signin.php'>Sign-in / Create Account-Set</a>";
+                            } else { // not logged in
+                                 echo "<a class='nav-item nav-link' href='signin.php'>Sign-in / Create Account-Set</a>";
+                              }
+                        } else { // session variable not set
+                            echo "<a class='nav-item nav-link' href='signin.php'>Sign-in / Create Account</a>";
                         }
-                    } else { // session variable not set
-
-                        echo "<a class='nav-item nav-link' href='signin.php'>Sign-in / Create Account</a>";
-                    }
                     ?>
                     </div>
                 </div>

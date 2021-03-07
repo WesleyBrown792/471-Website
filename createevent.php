@@ -1,5 +1,6 @@
 <?php
 session_start();
+//should check to see if the user is logged in unless we add a block on the welcome page for that
 ?>
 
 <html>

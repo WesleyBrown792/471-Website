@@ -44,5 +44,13 @@
             }
         
         }
+
+        public function getEvents(){
+            $conn = $this->getConnection();
+            $stmt = $conn->query("select * from events;");
+            $stmt->execute();
+            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            return $result;
+        }
     }
 ?>

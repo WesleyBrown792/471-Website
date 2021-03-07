@@ -7,11 +7,6 @@
     ?>
 </head>
 
-<?php
-//this is the homepage 
-//require_once "components/nav.php";
-?>
-
 <body class="h-100">
     <div class="h-100">
         <?php
@@ -45,6 +40,9 @@
 
             </div>
         </div>
+        <?php
+            include "components/footer.php";
+        ?>
     </div>
 </body>
 
