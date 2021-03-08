@@ -16,8 +16,9 @@ session_start();
         <?php
             include "components/nav.php";
         ?>
-
-
+             <button type="button" href="createvent.php">Create an Event</button> 
+             <button type="button" href="eventlist.php">See Events</button> 
+             <button type="button" href="modifyprof.php">Modify Profile</button> 
 
         <?php
             include "components/footer.php";
