@@ -1,5 +1,3 @@
-.login-container{
-}
 .login-form-1{
     padding: 5%;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
@@ -54,7 +52,7 @@ form .form-group {
 }
 
 .signin-full-container {
-    height: calc(100% - 58px);
+    height: 100%;
     width: 100%;
     display: flex;
     align-items: center;

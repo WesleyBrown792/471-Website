@@ -16,13 +16,12 @@ $_SESSION["access"] = -1;
     ?>
 </head>
 
-<body class="h-100">
+<body class="h-100 d-flex flex-column">
+    <?php
+    include "components/nav.php";
+    ?>
     <div class="h-100">
-        <?php
-        include "components/nav.php";
-        ?>
-
-        <div class="container-xl p-0 signin-full-container">
+        <div class="container-xl p-0 signin-full-container flex-shrink-0">
 
             <div class="container login-container">
                 <div class="row">
@@ -30,7 +29,9 @@ $_SESSION["access"] = -1;
                         <h3>Login</h3>
                         <form method="POST" action="login.php" onSubmit="return Empty()">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Your Email *" value="<?php if(isset($_SESSION['email'])){echo htmlentities($_SESSION['email']);}?>" name="email" id="loginEmail" />
+                                <input type="text" class="form-control" placeholder="Your Email *" value="<?php if (isset($_SESSION['email'])) {
+                                                                                                                echo htmlentities($_SESSION['email']);
+                                                                                                            } ?>" name="email" id="loginEmail" />
                             </div>
                             <div class="form-group">
                                 <input type="password" name="password" id="loginPassword" class="form-control" placeholder="Your Password *" value="" />
@@ -47,7 +48,9 @@ $_SESSION["access"] = -1;
                         <h3>Create Account</h3>
                         <form method="POST" action="accCreate.php" onSubmit="return ValidityChecker()">
                             <div class="form-group">
-                                <input type="text" name="email" id="accEmail" class="form-control" placeholder="Your Email *" value="<?php if(isset($_SESSION['email'])){echo htmlentities($_SESSION['email']);}?>" />
+                                <input type="text" name="email" id="accEmail" class="form-control" placeholder="Your Email *" value="<?php if (isset($_SESSION['email'])) {
+                                                                                                                                            echo htmlentities($_SESSION['email']);
+                                                                                                                                        } ?>" />
                             </div>
                             <div class="form-group">
                                 <input type="password" class="form-control" name="password" id="accPassword" placeholder="Your Password *" value="" />
@@ -64,10 +67,11 @@ $_SESSION["access"] = -1;
                 </div>
             </div>
         </div>
-        <?php
-            include "components/footer.php";
-        ?>
+
     </div>
+    <?php
+    include "components/footer.php";
+    ?>
 </body>
 
 </html>
