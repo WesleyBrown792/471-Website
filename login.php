@@ -12,18 +12,19 @@ if ($dao->userExists($email, $newpass)) {
         $_SESSION['access'] = 1;
         $_SESSION['authenticated'] = true;
         $_SESSION['isLoggedIn'] = "yes";
-        header("Location: welcome.php");
+        header("Location: index.php");
         exit();
     }else{
         $_SESSION['authenticated'] = true;
         $_SESSION['isLoggedIn'] = "yes";
-        header("Location: welcome.php");
+        header("Location: index.php");
         exit();
     }
 } else {
     $_SESSION['authenticated'] = false;
     $_SESSION['email'] = $email;
     $_SESSION['isLoggedIn'] = "no";
-    header("Location: index.php");
+    //header("Location: index.php");
+    header("Location: welcome.php");
     exit();
 }
