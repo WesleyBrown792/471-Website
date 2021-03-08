@@ -1,29 +1,38 @@
 <?php
-session_start();
+//session_start();
 ?>
 
 <html>
 
-    <head>
-<!--     <link rel="stylesheet" href="css/index.css"> --> 
-   <?php
+<head>
+    <!--     <link rel="stylesheet" href="css/index.css"> -->
+    <?php
     include "components/head.php";
     ?>
-    </head>
+    <link rel="stylesheet" href="css/welcome.css">
+</head>
 
-    <body>
-        <div>
-        <?php
-            include "components/nav.php";
-        ?>
-             <button type="button" href="createvent.php">Create an Event</button> 
-             <button type="button" href="eventlist.php">See Events</button> 
-             <button type="button" href="modifyprof.php">Modify Profile</button> 
+<body class="h-100 d-flex flex-column">
+    <?php
+    include "components/nav.php";
+    ?>
+    <div class="container-xl p-0 welcome-page-container">
 
-        <?php
-            include "components/footer.php";
-        ?>
+        <div class="welcome-page-button-container">
+            <button type="button" href="createvent.php">Create an Event</button>
+            <br>
+            <button type="button" href="eventlist.php">See Events</button>
+            <br>
+            <button type="button" href="modifyprof.php">Modify Profile</button>
         </div>
-    </body>
+
+
+
+
+    </div>
+    <?php
+    include "components/footer.php";
+    ?>
+</body>
 
 </html>
