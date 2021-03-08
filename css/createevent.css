@@ -1,0 +1,53 @@
+.create-event-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.form-column {
+    padding: 5%;
+    background: #ffc107;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+
+.form-column h3 {
+    text-align: center;
+    color: white;
+}
+
+.form-column form {
+    padding: 10%;
+}
+
+.form-column form .form-group {
+    padding: 10px;
+}
+
+.form-column form .form-group label {
+    padding: 0;
+    font-size: smaller;
+}
+
+.btnSubmit {
+    width: 75%;
+    border-radius: 1rem;
+    padding: 2%;
+    border: none;
+    cursor: pointer;
+    color: #333;
+}
+
+.center-button {
+    padding-top: 0;
+    text-align: center;
+}
+
+
+.form-top-padding {
+    padding-top: 10px;
+}
+
+
+
+
+
