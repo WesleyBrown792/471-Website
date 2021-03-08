@@ -1,29 +1,32 @@
 <?php
-session_start();
+//session_start();
 require_once 'gettables.php';
 ?>
 
 <html>
 
-    <head>
+<head>
+    <?php
+    include "components/head.php";
+    ?>
+    <link rel="stylesheet" href="css/eventlist.css">
+</head>
 
-    </head>
-
-    <body>
-        <div>
+<body class="h-100 d-flex flex-column">
+    <?php
+    include "components/nav.php";
+    ?>
+    <div class="container-xl p-0 event-list-page-container" id='page-container'>
+        <div class="event-list-container">
             <?php
-                include "components/nav.php";
-            ?>
-            <div id='page-container'>
-                <?php
-                    renderTable("events");
-                ?>
-            </div>
-        </div>
-            <?php
-                include "components/footer.php";
+            renderTable("events");
             ?>
         </div>
-    </body>
+    </div>
+
+</body>
+<?php
+require "components/footer.php";
+?>
 
 </html>
