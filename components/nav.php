@@ -22,7 +22,7 @@ session_start();
                     <?php
 
                         if(isset($_SESSION['isLoggedIn'])){ 
-                            if((string)($_SESSION['IsloggedIn'] == "yes")){ // logged in
+                            if((string)($_SESSION['isloggedIn'] == "yes")){ // logged in
                                  echo "<a class='nav-item nav-link' href='logout.php'>Logout</a>";
 
                             } else { // not logged in
