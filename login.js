@@ -63,7 +63,9 @@ function ValidityChecker() {
                 issues += 1;
             }
         }
-        window.alert(`${issues} issues: ` + retVal);
+        if (issues > 0) {
+            window.alert(`${issues} issues: ` + retVal);
+        }
         return issues === 0;
     }
     return AccountValidation();
