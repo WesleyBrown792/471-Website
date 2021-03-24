@@ -29,11 +29,6 @@
                             <li>Temple</li>
                         </ul>
                     </div>
-                    <div class="first-section-create-button w-100">
-                        <a href="signin.php">
-                            <button type="button" class="btn  btn-warning btn-lg">Create a Sign-Up</button>
-                        </a>
-                    </div>
                 </div>
             </div>
             <div class="w-100 second-homepage-section">
