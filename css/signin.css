@@ -57,3 +57,7 @@ form .form-group {
     display: flex;
     align-items: center;
 }
+
+.form-container {
+    padding-top: 10%;
+}

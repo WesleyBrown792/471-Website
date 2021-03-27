@@ -1,6 +1,8 @@
 <html>
 <?php
-session_start();
+if(session_status() !== PHP_SESSION_ACTIVE){
+    session_start(); 
+}
 ?>
 <body>
     <div class="container-fluid bg-dark">

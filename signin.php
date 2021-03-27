@@ -20,9 +20,9 @@ $_SESSION["access"] = -1;
     <?php
     include "components/nav.php";
     ?>
-    <div class="h-100">
-        <div class="container-xl p-0 signin-full-container flex-shrink-0">
 
+    <div class="form-wrapper">
+        <div class="container form-container d-flex justify-content-center">
             <div class="container login-container">
                 <div class="row">
                     <div class="col-md-6 login-form-1">
@@ -67,8 +67,9 @@ $_SESSION["access"] = -1;
                 </div>
             </div>
         </div>
-
     </div>
+
+
     <?php
     include "components/footer.php";
     ?>
