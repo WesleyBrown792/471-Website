@@ -16,7 +16,7 @@ if(session_status() !== PHP_SESSION_ACTIVE){
                     <div class="navbar-nav">
                         <a class="nav-item nav-link" href="index.php">Home</a>
                         <a class="nav-item nav-link" href="event.php">Setup Event</a>
-                        <a class="nav-item nav-link" href="help">FAQ</a>
+                        <a class="nav-item nav-link" href="faq.php">FAQ</a>
                     </div>
                 </div>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
