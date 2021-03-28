@@ -44,6 +44,16 @@
             }
         
         }
+        
+        public function addPreferences($background, $font, $image){
+           $conn = $this->getConnection();
+           $savePref = "insert into preferences (background,font,image) values (:background,:font,:image);";
+           $p = $conn->prepare($savePref);
+           $p->bindParam(":background",$background);
+           $p->bindParam(":font",$font);
+           $p->bindParam(":image",$image);
+           $p->execute();
+       }
 
         public function getEvents(){
             $conn = $this->getConnection();
