@@ -1,0 +1,12 @@
+Add the header:
+<?php
+    include "components/head.php";
+?>
+Add the nav bar:
+<?php
+    include "components/nav.php";
+?>
+Add a footer:
+<?php
+    include "components/footer.php";
+?>

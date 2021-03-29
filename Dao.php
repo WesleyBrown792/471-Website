@@ -44,16 +44,6 @@
             }
         
         }
-        
-        public function addPreferences($background, $font, $image){
-           $conn = $this->getConnection();
-           $savePref = "insert into preferences (background,font,image) values (:background,:font,:image);";
-           $p = $conn->prepare($savePref);
-           $p->bindParam(":background",$background);
-           $p->bindParam(":font",$font);
-           $p->bindParam(":image",$image);
-           $p->execute();
-       }
 
         public function getEvents(){
             $conn = $this->getConnection();
@@ -61,6 +51,23 @@
             $stmt->execute();
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
             return $result;
+        }
+
+        public function getQuestions(){
+            $conn = $this->getConnection();
+            $stmt = $conn->query("select * from questions;");
+            $stmt->execute();
+            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            return $result;
+        }
+
+        public function answerQuestions($answer, $ID){
+            $conn = $this->getConnection();
+            $savePref = ("update questions set questionAnswer = :answer where questionID = :ID ");
+            $p = conn->prepare($savePref);
+            $p->bindParam(":answer",$answer);
+            $p->bindParam(":ID",$ID)
+            $p->execute();
         }
     }
 ?>

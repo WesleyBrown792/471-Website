@@ -29,14 +29,6 @@ create table guests (
 	Primary Key (guestID)
 );
 
-create table preferences(
-    preferencesID int Not Null AUTO_INCREMENT,
-    background varchar(64) Not Null,
-    fontColor varchar(64) Not Null,
-    image varchar(64) Not Null,
-    Primary Key(preferencesID)
-);
-
 insert into user (email, password, access)
 values ("admin@admin.com", "Pa$$w0rd", "1");
 insert into user (email, password)

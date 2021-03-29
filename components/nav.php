@@ -1,8 +1,6 @@
 <html>
 <?php
-if(session_status() !== PHP_SESSION_ACTIVE){
-    session_start(); 
-}
+session_start();
 ?>
 <body>
     <div class="container-fluid bg-dark">
@@ -15,7 +13,7 @@ if(session_status() !== PHP_SESSION_ACTIVE){
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         <a class="nav-item nav-link" href="index.php">Home</a>
-                        <a class="nav-item nav-link" href="event.php">Setup Event</a>
+                        <a class="nav-item nav-link" href="eventlist.php">Event List</a>
                         <a class="nav-item nav-link" href="faq.php">FAQ</a>
                     </div>
                 </div>
@@ -24,7 +22,7 @@ if(session_status() !== PHP_SESSION_ACTIVE){
                     <?php
 
                         if(isset($_SESSION['isLoggedIn'])){ 
-                            if((string)($_SESSION['isloggedIn'] == "yes")){ // logged in
+                            if($_SESSION['isloggedIn'] = "yes"){ // logged in
                                  echo "<a class='nav-item nav-link' href='logout.php'>Logout</a>";
 
                             } else { // not logged in
