@@ -1,30 +1,23 @@
 <?php
 session_start();
+require_once 'gettables.php';
 ?>
 
 <html>
-    <head>
-    <?php
-         include "components/head.php";
-    ?>
-    </head>
-
-    <div class="h-100">
-        <?php
-        include "components/nav.php";
-        ?>
-        
-        <?php
-            include "components/footer.php";
-        ?>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<head>
+<title>FAQ</title>
+<link rel="stylesheet" href="css/faq.css">
+<?php
+include "components/head.php";
+?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 
 <?php
 if($_SESSION['access'] != 1){
 ?>
+
 <body class="h-100 d-flex flex-column">
     <?php
     include "components/nav.php";
@@ -60,6 +53,11 @@ if($_SESSION['access'] != 1){
 
 
 
+                </div>
+                <div>
+                    <?php
+                        renderUserQuestions("questions");
+                    ?>
                 </div>
 
             </div>

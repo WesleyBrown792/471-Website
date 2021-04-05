@@ -20,9 +20,9 @@ $_SESSION["access"] = -1;
     <?php
     include "components/nav.php";
     ?>
-    <div class="h-100">
-        <div class="container-xl p-0 signin-full-container flex-shrink-0">
 
+    <div class="form-wrapper">
+        <div class="container form-container d-flex justify-content-center">
             <div class="container login-container">
                 <div class="row">
                     <div class="col-md-6 login-form-1">
@@ -48,12 +48,12 @@ $_SESSION["access"] = -1;
                         <h3>Create Account</h3>
                         <form method="POST" action="accCreate.php" onSubmit="return ValidityChecker()">
                             <div class="form-group">
-                                <input type="text" name="email" id="accEmail" class="form-control" placeholder="Your Email *" value="<?php if (isset($_SESSION['email'])) {
-                                                                                                                                            echo htmlentities($_SESSION['email']);
+                                <input type="text" name="newEmail" id="accEmail" class="form-control" placeholder="Your Email *" value="<?php if (isset($_SESSION['newEmail'])) {
+                                                                                                                                            echo htmlentities($_SESSION['newEmail']);
                                                                                                                                         } ?>" />
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control" name="password" id="accPassword" placeholder="Your Password *" value="" />
+                                <input type="newPassword" class="form-control" name="password" id="accPassword" placeholder="Your Password *" value="" />
                             </div>
                             <div class="form-group">
                                 <input type="submit" class="btnSubmit" value="Sign-Up" />
@@ -67,8 +67,9 @@ $_SESSION["access"] = -1;
                 </div>
             </div>
         </div>
-
     </div>
+
+
     <?php
     include "components/footer.php";
     ?>

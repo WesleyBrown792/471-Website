@@ -29,7 +29,7 @@ function renderTable($tablename){
 <?php
 function renderQuestions($tablename){
     $dao = new Dao();
-    $questions = $dao->getquestions();
+    $questions = $dao->getQuestions();
     if(count($questions)==0){
         echo "No Questions Yet";
         exit;
@@ -44,6 +44,32 @@ function renderQuestions($tablename){
             foreach($questions as $questions){
                 if($questions[questionAnswer]){
                     echo "<tr><td>". htmlspecialchars($questions['questionID']) . "</td><td>" . htmlspecialchars($questions['questionAsk']) . "</td></tr>";
+                }
+            }
+        ?>
+        </table>
+   <?php
+    }
+    ?>
+
+<?php
+function renderUserQuestions($tablename){
+    $dao = new Dao();
+    $questions = $dao->getUserQuestions();
+    if(count($questions)==0){
+        echo "No Questions Yet";
+        exit;
+    }
+    ?>
+    <table>
+        <thead>
+            <th>Question Asked<th>
+        </thead>
+        <?php
+            
+            foreach($questions as $questions){
+                if($questions[questionAnswer]){
+                    echo "<tr><td>" . htmlspecialchars($questions['questionAsk']) . "</td></tr>";
                 }
             }
         ?>

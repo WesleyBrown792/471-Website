@@ -45,9 +45,46 @@
         
         }
 
+        public function emailExists($email){
+            $conn = $this->getConnection();
+            $stmt =  $conn->prepare("select * from user where email = :email");
+            $stmt->bindParam(":email",$email,PDO::PARAM_STR);
+            $stmt->execute();
+            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            if(is_null($email)){
+                return false;
+            }else{
+                if(count($result)==1){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+        
+        }
+        
+        public function addPreferences($background, $font, $image){
+           $conn = $this->getConnection();
+           $savePref = "insert into preferences (background,font,image) values (:background,:font,:image);";
+           $p = $conn->prepare($savePref);
+           $p->bindParam(":background",$background);
+           $p->bindParam(":font",$font);
+           $p->bindParam(":image",$image);
+           $p->execute();
+       }
+
         public function getEvents(){
             $conn = $this->getConnection();
             $stmt = $conn->query("select * from events;");
+            $stmt->execute();
+            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            return $result;
+        }
+
+        public function getUserQuestions(){
+            $conn = $this->getConnection();
+            $stmt = $conn->query("select * from questions where questionEmail = :user;");
             $stmt->execute();
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
             return $result;
@@ -63,10 +100,10 @@
 
         public function answerQuestions($answer, $ID){
             $conn = $this->getConnection();
-            $savePref = ("update questions set questionAnswer = :answer where questionID = :ID ");
-            $p = conn->prepare($savePref);
+            $savePref = ("update questions set questionAnswer = :answer where questionID = :ID;");
+            $p = $conn->prepare($savePref);
             $p->bindParam(":answer",$answer);
-            $p->bindParam(":ID",$ID)
+            $p->bindParam(":ID",$ID);
             $p->execute();
         }
     }

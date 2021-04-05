@@ -1,6 +1,8 @@
 <html>
 <?php
-session_start();
+if(session_status() !== PHP_SESSION_ACTIVE){
+   session_start(); 
+}
 ?>
 <body>
     <div class="container-fluid bg-dark">
@@ -21,8 +23,8 @@ session_start();
                     <div class="navbar-nav">
                     <?php
 
-                        if(isset($_SESSION['isLoggedIn'])){ 
-                            if($_SESSION['isLoggedIn'] = "yes"){ // logged in
+                        if(isset($_SESSION['authenticated'])){ 
+                            if($_SESSION['authenticated']){ // logged in
                                  echo "<a class='nav-item nav-link' href='logout.php'>Logout</a>";
 
                             } else { // not logged in
