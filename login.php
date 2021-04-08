@@ -12,7 +12,7 @@ if ($dao->userExists($email, $newpass)) {
         $_SESSION['access'] = 1;
         $_SESSION['authenticated'] = true;
         $_SESSION['isLoggedIn'] = "yes";
-        header("Location: signin.php");
+        header("Location: welcome.php");
     }else{
         $_SESSION['authenticated'] = true;
         $_SESSION['isLoggedIn'] = "yes";
