@@ -1,9 +1,11 @@
 <?php
-if($_SESSION['authenticated']){
+/* if($_SESSION['authenticated']){
     
   }else{
     header("Location: index.php");
-  }
+  } */
+
+  echo($_SESSION['authenticated'])
 ?>
 
 <html>
