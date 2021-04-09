@@ -3,7 +3,7 @@
     header("Location: index.php");
   } */
 
-  print_r($_SESSION['authenticated']);
+  print_r($_SESSION);
 ?>
 
 <html>
