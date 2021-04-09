@@ -1,7 +1,9 @@
 <?php
-if($_SESSION['authenticated'] != true){
+/* if($_SESSION['authenticated'] != true){
     header("Location: index.php");
-  }
+  } */
+
+  print_r($_SESSION['authenticated']);
 ?>
 
 <html>
