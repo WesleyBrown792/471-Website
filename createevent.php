@@ -30,18 +30,25 @@ if($_SESSION['authenticated'] != true){
                     </div>
                     <div class="col form-column">
                         <h3>Create Your Event</h3>
-                        <form method="POST" action="#" onSubmit="return Empty()">
+                        <form method="POST" action="event.php" onSubmit="return Empty()">
                             <div class="form-group">
-                                <input type="text" class="w-100" placeholder="Event Title *" value="" name="eventName" id="eventName" />
+                                <input type="text" class="w-100" placeholder="Event Title *" value="<?php if (isset($_SESSION['eventname'])) {
+                                        echo htmlentities($_SESSION['eventname']);
+                                        } ?>" name="eventName"
+                                        id="eventName" />
                             </div>
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col">
-                                        <input type="date" name="startDate" id="startDate" placeholder="Start Date *" value="" />
+                                        <input type="date" name="startDate" id="startDate" placeholder="Start Date *" value="<?php if (isset($_SESSION['startdate'])) {
+                                                echo htmlentities($_SESSION['startdate']);
+                                            } ?>" />
                                         <label for="startDate">Start Date</label>
                                     </div>
                                     <div class="col">
-                                        <input type="time" name="startTime" id="startTime" placeholder="Start Time *" value="" />
+                                        <input type="time" name="startTime" id="startTime" placeholder="Start Time *" value="<?php if (isset($_SESSION['starttime'])) {
+                                                echo htmlentities($_SESSION['starttime']);
+                                            } ?>" />
                                         <label for="startTime">Start Time</label>
                                     </div>
                                 </div>
@@ -49,11 +56,15 @@ if($_SESSION['authenticated'] != true){
                             <div class="form-group form-top-padding">
                                 <div class="row">
                                     <div class="col">
-                                        <input type="date" name="endDate" id="endDate" placeholder="End Date *" value="" />
+                                        <input type="date" name="endDate" id="endDate" placeholder="End Date *" value="<?php if (isset($_SESSION['enddate'])) {
+                                                echo htmlentities($_SESSION['enddate']);
+                                            } ?>" />
                                         <label for="endDate">End Date</label>
                                     </div>
                                     <div class="col">
-                                        <input type="time" name="endTime" id="endTime" placeholder="End Time *" value="" />
+                                        <input type="time" name="endTime" id="endTime" placeholder="End Time *" value="<?php if (isset($_SESSION['endtime'])) {
+                                                echo htmlentities($_SESSION['endtime']);
+                                            } ?>" />
                                         <label for="endTime">End Time</label>
                                     </div>
                                 </div>

@@ -4,12 +4,12 @@ require_once 'Dao.php';
 
 $dao = new Dao();
 $ID = $_POST['ID'];
-$ans = $_POST['ans'];
+$update = $_POST['update'];
 $func = $_POST['func'];
 
 $_SESSION['ID'] = $ID;
-$_SESSION['ans'] = $ans;
+$_SESSION['update'] = $update;
 
 
 
-$dao->answerQuestions($ans, $ID);
+$dao->updateMyEvents($update, $ID);

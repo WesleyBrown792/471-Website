@@ -1,5 +1,5 @@
 <?php
-//session_start();
+session_start();
 require_once 'gettables.php';
 ?>
 
@@ -22,6 +22,10 @@ require_once 'gettables.php';
             renderTable("events");
             ?>
         </div>
+    </div>
+
+    <div>
+        <button type="button" onclick="myevents.php">See and edit you Events</button>
     </div>
 
 </body>

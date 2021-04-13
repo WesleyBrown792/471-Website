@@ -27,6 +27,30 @@ function renderTable($tablename){
     ?>
 
 <?php
+function renderMyTable($user){
+    $dao = new Dao();
+    $events = $dao->getMyEvents($user);
+    if(count($events)==0){
+        echo "You have not made any events yet";
+        exit;
+    }
+    ?>
+    <table>
+        <thead>
+            <th>Event ID</th><th>Events Name</th><th>Event Description<th>
+        </thead>
+        <?php
+            
+            foreach($events as $events){
+                echo "<tr><td>". htmlspecialchars($events['eventID']) . "</td><td>" . htmlspecialchars($events['eventName']) . "</td><td>" . htmlspecialchars($events['eventDescription']) . "</td></tr>";
+            }
+        ?>
+        </table>
+   <?php
+    }
+    ?>
+
+<?php
 function renderQuestions($tablename){
     $dao = new Dao();
     $questions = $dao->getQuestions();

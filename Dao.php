@@ -82,6 +82,36 @@
             return $result;
         }
 
+        public function getMyEvents($username){
+            $conn = $this->getConnection();
+            $savePref = "slect * form events where eventCreatorEmail = :user;";
+            $p = $conn->prepare($savePref);
+            $p->bindParam(":user",$username);
+            $stmt->execute();
+            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            return $result;
+        }
+
+        public function updateMyEvents($username){
+            $conn = $this->getConnection();
+            $savePref = "slect * form events where eventCreatorEmail = :user;";
+            $p = $conn->prepare($savePref);
+            $p->bindParam(":user",$username);
+            $stmt->execute();
+            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            return $result;
+        }
+
+        public function addQuestion($email, $ask, $ans){
+            $conn = $this->getConnection();
+            $saveQ = "insert into questions (email, ask, ans) values (:email,:ask, :ans);";
+            $q = $conn->prepare($saveQ);
+            $q->bindParam(":email",$email);
+            $q->bindParam(":ask",$ask);
+            $q->bindParam(":ans", $ans);
+            $q->execute();
+        }
+
         public function getUserQuestions(){
             $conn = $this->getConnection();
             $stmt = $conn->query("select * from questions where questionEmail = :user;");
@@ -103,6 +133,14 @@
             $savePref = ("update questions set questionAnswer = :answer where questionID = :ID;");
             $p = $conn->prepare($savePref);
             $p->bindParam(":answer",$answer);
+            $p->bindParam(":ID",$ID);
+            $p->execute();
+        }
+
+        public function deleteQuestion($ID){
+            $conn = $this->getConnection();
+            $savePref = ("delete from questions where questionID = :ID;");
+            $p = $conn->prepare($savePref);
             $p->bindParam(":ID",$ID);
             $p->execute();
         }
