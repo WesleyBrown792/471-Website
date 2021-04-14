@@ -30,7 +30,7 @@ if($_SESSION['authenticated'] != true){
                     </div>
                     <div class="col form-column">
                         <h3>Create Your Event</h3>
-                        <form method="POST" action="event.php" onSubmit="return Empty()">
+                        <form method="POST" action="event.php" onSubmit="location.href='eventlist.php';return false;">
                             <div class="form-group">
                                 <input type="text" class="w-100" placeholder="Event Title *" value="<?php if (isset($_SESSION['eventname'])) {
                                         echo htmlentities($_SESSION['eventname']);
