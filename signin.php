@@ -53,7 +53,7 @@ $_SESSION["access"] = -1;
                                                                                                                                         } ?>" />
                             </div>
                             <div class="form-group">
-                                <input type="newPassword" class="form-control" name="password" id="accPassword" placeholder="Your Password *" value="" />
+                                <input type="password" class="form-control" name="password" id="accPassword" placeholder="Your Password *" value="" />
                             </div>
                             <div class="form-group">
                                 <input type="submit" class="btnSubmit" value="Sign-Up" />
