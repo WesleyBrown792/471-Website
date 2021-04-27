@@ -2,7 +2,7 @@
 session_start();
 require_once 'Dao.php';
 $email=$_POST["newEmail"];
-$pass=$_POST["newPassword"];
+$pass=$_POST["password"];
 $dao = new Dao();
 
 $salt = "totalyrandomjunkyouknow";
