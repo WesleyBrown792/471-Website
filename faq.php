@@ -53,17 +53,17 @@ if($_SESSION['access'] != 1){
                 </div>
                 <div>
                     <h3>Ask a Question</h3>
-                    <form method="POST" action="">
-                    <div>
-                        <input type="text" class="form-control" placeholder="Ask us anything..." value="<?php if(isset($_SESSION['ask'])) {
+                    <form method="POST" action="addquestion.php">
+                        <div>
+                            <input type="text" name="question" class="form-control" placeholder="Ask us anything..." value="<?php if(isset($_SESSION['ask'])) {
                             echo
                             htmlentities($_SESSION
                             ['ask']);
                         } ?>" name="ask" />
-                    </div>
-                    <div>
-                        <input type="submit" name="btnSubmit" value="Submit" />
-                    </div>
+                        </div>
+                            <div>
+                                <input type="submit" name="btnSubmit" value="Submit" />
+                            </div>
                     </form>
                 </div>
 
