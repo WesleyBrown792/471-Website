@@ -67,7 +67,7 @@ if($_SESSION['access'] != 1){
                             $email = "default";
                             $answer = "Not answered";
 
-                            //$dao->addQuestion($email, $ask, $answer);
+                            $dao->addQuestion($email, $ask, $answer);
                             $inp = file_get_contents('faq.json');
                             $tempArray = json_decode($inp, true);
                             $data = array();
