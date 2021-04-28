@@ -53,34 +53,6 @@ if($_SESSION['access'] != 1){
                 </div>
                 <div>
                     <h3>Ask a Question</h3>
-                    <?php
-                        if(isset($_REQUEST['btnSubmit']))
-                        {
-                            if (isset($_SESSION['askNum'])) {
-                                $_SESSION['askNum']++;
-                            }
-                            else {
-                                $_SESSION['askNum'] = 3;
-                            }
-                            $dao = new Dao();
-                            $ask = $_POST['ask'];
-                            $email = "default";
-                            $answer = "Not answered";
-
-                            $dao->addQuestion($email, $ask, $answer);
-                            $inp = file_get_contents('faq.json');
-                            $tempArray = json_decode($inp, true);
-                            $data = array();
-                            $questionNum = "question" . $_SESSION['askNum'];
-                            $data[] = array ($questionNum =>array (
-                                'q' => $ask,
-                                'a' => $answer,
-                            ));
-                            array_push($tempArray, $data);
-                            $json = json_encode($tempArray);
-                            file_put_contents('faq.json', $json);
-                        }
-                        ?>
                     <form method="POST" action="">
                     <div>
                         <input type="text" class="form-control" placeholder="Ask us anything..." value="<?php if(isset($_SESSION['ask'])) {
