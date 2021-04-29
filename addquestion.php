@@ -10,5 +10,5 @@
     $q->execute();
     $q->close();
     $conn->close();
-    header("location:/faq.php");
+    header("location:faq.php");
     exit();
