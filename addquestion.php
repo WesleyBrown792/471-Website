@@ -7,11 +7,8 @@
     $email = "defaultemail";
 
     $conn = $this->getConnection();
-    $saveQ = "insert into questions (questionEmail, questionAsk, questionAnswer) values (:email,:ask, :ans)";
-    $q = $conn->prepare($saveQ);
-    $q->bindParam(":email",$email);
-    $q->bindParam(":ask",$question);
-    $q->bindParam(":ans", $ans);
+    $q = $conn->prepare("INSERT INTO questions (questionEmail, questionAsk, questionAnswer) VALUES (?,?,?)");
+    $q->bind_param("sss", $email, $question, $ans);
     $q->execute();
 
     header("location:faq.php");
