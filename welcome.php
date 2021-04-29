@@ -24,7 +24,7 @@ if($_SESSION['authenticated']){
     <div class="container-xl p-0 welcome-page-container">
 
         <div class="welcome-page-button-container">
-            <button type="button" onclick="window.location ='createvent.php'">Create an Event</button>
+            <button type="button" onclick="window.location ='createevent.php'">Create an Event</button>
             <br>
             <button type="button" onclick="window.location ='eventlist.php'">See Events</button>
             <br>
