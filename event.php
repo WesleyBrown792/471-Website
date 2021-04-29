@@ -14,3 +14,4 @@ $dao = new Dao();
 
 $dao->addEvent($eventname, $startdatetime, $enddatetime, $_SESSION['email'], $description, $participants);
 header("Location: eventlist.php");
+exit();
