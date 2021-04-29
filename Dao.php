@@ -74,6 +74,20 @@
            $p->execute();
        }
 
+
+       public function addEvent($eventname, $startdatetime, $enddatetime, $email, $description, $participants){
+        $conn = $this->getConnection();
+        $savePref = "insert into events (eventName,eventStartTime,eventEndTime,eventCreatorEmail,eventDescription,eventParticipants) values (:eventname,:startdatetime,:enddatetime,:email,:description,:participants);";
+        $p = $conn->prepare($savePref);
+        $p->bindParam(":eventname",$eventname);
+        $p->bindParam(":startdatetime",$startdatetime);
+        $p->bindParam(":enddatetime",$enddatetime);
+        $p->bindParam(":email",$email);
+        $p->bindParam(":description",$description);
+        $p->bindParam(":participants",$participants);
+        $p->execute();
+    }
+
         public function getEvents(){
             $conn = $this->getConnection();
             $stmt = $conn->query("select * from events;");

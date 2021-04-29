@@ -66,7 +66,7 @@ function renderQuestions($tablename){
         <?php
             
             foreach($questions as $questions){
-                if($questions['questionAnswer']){
+                if($questions[questionAnswer]){
                     echo "<tr><td>". htmlspecialchars($questions['questionID']) . "</td><td>" . htmlspecialchars($questions['questionAsk']) . "</td></tr>";
                 }
             }
@@ -92,7 +92,7 @@ function renderUserQuestions($tablename){
         <?php
             
             foreach($questions as $questions){
-                if($questions['questionAnswer']){
+                if($questions[questionAnswer]){
                     echo "<tr><td>" . htmlspecialchars($questions['questionAsk']) . "</td></tr>";
                 }
             }
