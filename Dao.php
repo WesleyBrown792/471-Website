@@ -104,7 +104,7 @@
 
         public function addQuestion($email, $ask, $ans){
             $conn = $this->getConnection();
-            $saveQ = "insert into questions (email, ask, ans) values (:email,:ask, :ans);";
+            $saveQ = "insert into questions (questionEmail, questionAsk, questionAnswer) values (:email,:ask, :ans);";
             $q = $conn->prepare($saveQ);
             $q->bindParam(":email",$email);
             $q->bindParam(":ask",$ask);
