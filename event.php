@@ -12,6 +12,7 @@ $description="default";
 $participants=0;
 $dao = new Dao();
 echo "bungis";
+echo $eventname;
 $dao->addEvent($eventname, $startdatetime, $enddatetime, $_SESSION['email'], $description, $participants);
 echo "sad";
 header("Location: eventlist.php");
