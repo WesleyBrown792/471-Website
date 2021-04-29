@@ -13,3 +13,4 @@
     $q->bindParam(":ask",$question);
     $q->bindParam(":ans", $ans);
     $q->execute();
+    header("Location: faq.php");
