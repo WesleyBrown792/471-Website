@@ -74,6 +74,10 @@
            $p->execute();
        }
 
+<<<<<<< Updated upstream
+
+=======
+>>>>>>> Stashed changes
        public function addEvent($eventname, $startdatetime, $enddatetime, $email, $description, $participants){
         $conn = $this->getConnection();
         $savePref = "insert into events (eventName,eventStartTime,eventEndTime,eventCreatorEmail,eventDescription,eventParticipants) values (:eventname,:startdatetime,:enddatetime,:email,:description,:participants);";
@@ -117,7 +121,7 @@
 
         public function addQuestion($email, $ask, $ans){
             $conn = $this->getConnection();
-            $saveQ = "insert into questions (questionEmail, questionAsk, questionAnswer) values (:email,:ask, :ans);";
+            $saveQ = "insert into questions (email, ask, ans) values (:email,:ask, :ans);";
             $q = $conn->prepare($saveQ);
             $q->bindParam(":email",$email);
             $q->bindParam(":ask",$ask);
@@ -125,17 +129,9 @@
             $q->execute();
         }
 
-        public function getUserQuestions(){
-            $conn = $this->getConnection();
-            $stmt = $conn->query("select * from questions where questionEmail = :user;");
-            $stmt->execute();
-            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            return $result;
-        }
-
         public function getQuestions(){
             $conn = $this->getConnection();
-            $stmt = $conn->query("select * from questions;");
+            $stmt = $conn->prepare("select * from questions;");
             $stmt->execute();
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
             return $result;

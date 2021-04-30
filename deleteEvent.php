@@ -2,9 +2,12 @@
     session_start();
     require_once 'Dao.php';
 
+    $dao = new Dao();
     $eventName = $_GET['eventName'];
 
     $sql = "DELETE FROM events WHERE eventName = ?";
+
+    $conn = $dao->getConnection();
 
     $stmt = mysqli_stmt_init($conn);
 

@@ -1,8 +1,8 @@
 <?php
 session_start();
-if($_SESSION['authenticated'] != true){
-    header("Location: index.php");
-  }
+//if($_SESSION['authenticated'] != true){
+    //header("Location: index.php");
+  //}
 ?>
 
 <html>
