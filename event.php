@@ -16,5 +16,5 @@ $dao = new Dao();
 //print "$eventname , $startdatetime , $enddatetime , $email , $description , $participants";
 $dao->addEvent($eventname, $startdatetime, $enddatetime, $email, $description, $participants);
 //echo "sad";
-header("Location: eventlist.php");
+header("Location: confirmation.php");
 exit();
