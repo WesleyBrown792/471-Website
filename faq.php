@@ -80,7 +80,7 @@ if($_SESSION['access'] != 1){
                             file_put_contents('faq.json', $json);
                         }
                         ?>
-                    <form method="POST" action="">
+                    <form method="POST">
                     <div>
                         <input type="text" class="form-control" placeholder="Ask us anything..." value="<?php if(isset($_SESSION['ask'])) {
                             echo
