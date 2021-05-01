@@ -74,10 +74,6 @@
            $p->execute();
        }
 
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
        public function addEvent($eventname, $startdatetime, $enddatetime, $email, $description, $participants){
         $conn = $this->getConnection();
         $savePref = "insert into events (eventName,eventStartTime,eventEndTime,eventCreatorEmail,eventDescription,eventParticipants) values (:eventname,:startdatetime,:enddatetime,:email,:description,:participants);";
